@@ -2,7 +2,6 @@ import "./globals.css";
 import { NavBar } from "@/components/NavBar";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { cn } from "@/lib/utils";
 import { Roboto_Mono } from "next/font/google";
 
@@ -32,7 +31,6 @@ export default function RootLayout({
 				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
 					<NavBar />
 					{children}
-					<TailwindIndicator />
 				</ThemeProvider>
 			</body>
 		</html>
