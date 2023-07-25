@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 90%;
+		--foreground: 0 0% 7%;
+
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+
+		--popover: 0 0% 90%;
+		--popover-foreground: 0 0% 7%;
+
+		--card: 0 0% 90%;
+		--card-foreground: 0 0% 7%;
+
+		--border: 0 0% 7%;
+		--input: 0 0% 7%;
+
+		--primary: 0 0% 7%;
+		--primary-foreground: 210 40% 98%;
+
+		--secondary: 0 0% 10%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+
+		--accent: 0 0% 87%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+
+		--ring: 215 20.2% 65.1%;
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--background: 0 0% 7%;
+		--foreground: 210 40% 98%;
+
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+
+		--border: 0 0% 20%;
+		--input: 0 0% 90%;
+
+		--primary: 0 0% 100%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+
+		--accent: 0 0% 20%;
+		--accent-foreground: 210 40% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 85.7% 97.3%;
+
+		--ring: 217.2 32.6% 17.5%;
+
+		--radius: 0.5rem;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+@layer utilities {
+	.snap {
+		scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+	}
+	.snap-y {
+		--scroll-snap-direction: y;
+	}
+	.snap-mandatory {
+		--scroll-snap-constraint: mandatory;
+	}
+	.snap-start {
+		scroll-snap-align: start;
+	}
+}
+
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
