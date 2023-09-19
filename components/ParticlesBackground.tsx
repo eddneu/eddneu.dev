@@ -24,7 +24,7 @@ export default function ParticlesBackground() {
 						value: theme == "dark" ? "#121212" : "#e6e6e6",
 					},
 				},
-				fpsLimit: 120,
+				fpsLimit: 60,
 				interactivity: {
 					events: {
 						onClick: {
@@ -65,13 +65,13 @@ export default function ParticlesBackground() {
 							default: "bounce",
 						},
 						random: false,
-						speed: 1,
+						speed: 0.4,
 						straight: false,
 					},
 					number: {
 						density: {
 							enable: true,
-							area: 800,
+							area: 1000,
 						},
 						value: 80,
 					},
